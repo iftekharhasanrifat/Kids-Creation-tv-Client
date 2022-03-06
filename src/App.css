@@ -1,38 +1,498 @@
-.App {
+/* .top-banner h1 {
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+} */
+
+body{
+  overflow-x: hidden !important;
+}
+
+.cont{
+  max-width: 1250px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#logo img {
+  position: absolute;
+  z-index: 1;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+
+#about-us {
+  padding: 20px;
+}
+
+#about {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 30px gray;
+}
+
+#about p {
+  font-size: 16px;
+}
+
+.top-banner {
+  height: 300px;
+  background: url('./images/Kids-Banar-UP (2).jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+header{
+  position: relative;
+}
+
+
+.social-links{
+  position: absolute;
+  right: 0;
+  top: -4rem;
+  width: 10rem;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: .7rem;
+  
+}
+.social-links a{
+  font-size: 2.5rem;
+  transition: all .3s;
+}
+.social-links a:hover{
+  transform: scale(1.2);
+}
+.navbar {
+  background-color: green;
+}
+
+.navbar-brand{
+  width: 200px !important;
+  height: 60px;
+  transition: all 1s;
+  text-align: center;
+  position: relative;
+}
+
+.navbar-brand img{
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(1.2);
+}
+.navbar-brand img:hover{
+  transform: scale(1.5);
+}
+
+ul li a {
+  color: white!important;
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.live {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.carousel-item img {
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.card {
+  width: 300px;
+}
+
+.card-video{
+  height: 300px;
+  position:relative;
+  padding-bottom:56.25%;
+  padding-top: 2.5rem;
+}
+.card-video iframe{
+  position: absolute;
+  left:0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.table td {
+  vertical-align: middle;
+}
+
+#contents a {
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .live iframe {
+      width: 375px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+footer {
+  border-top: 1px solid gray;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer a {
+  margin: 10px;
+  font-size: 30px;
+}
+
+#footer-container {
+  padding: 5px;
+  /* border-radius: 15px;
+  box-shadow: 10px 10px 30px gray; */
+}
+
+footer h4 {
+  padding-top: 10px;
+}
+.text-w{
+  color: rgb(235, 232, 232);
+}
+#youtube {
+  color: red;
+}
+
+#contact strong {
+  font-size: 20px;
+}
+
+#contact i {
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+#contact-us #live {
+  height: 600px;
+}
+
+#programs h1 {
+  font-size: 30px;
+  transition: 0.3s;
+}
+
+#programs h1:hover {
+  color: green!important;
+  font-size: 40px;
+}
+
+ul li a:hover {
+  color: black!important;
+  background-color: yellowgreen;
+  border-radius: 5px;
+}
+
+.live iframe {
+  border: 10px solid white;
+}
+
+.topvideo{
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: center; 
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.carousel {
+  margin: 8vh auto;
+  width:97%;
+  height:360px;
+  outline: 1rem solid #fff;
+}
+@media only screen and (max-width:895px){
+  .carousel {
+      width:95vw;
+      height:250px;
+      margin-bottom: 5vh;
   }
-  to {
-    transform: rotate(360deg);
+
+  .mt-10{
+      margin-top: 10rem !important;
+  }
+}
+
+@media only screen and (max-width:767px){
+  .mt2-10{
+      margin-top: 3rem !important;
+  }
+
+  .mt1-10{
+      margin-top: 11rem !important;
+  }
+}
+
+
+.row{
+  margin-top: 0 !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  background-color: rgb(116, 116, 116);
+}
+
+.programs-container{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.programs-container .programs-container-nav{
+  width: 17rem;
+}
+
+.programs-container .programs-container-content{
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.programs-container .programs-container-nav .programs-container-nav-item{
+  width: 100%;
+  cursor: pointer;
+}
+
+.programs-container .programs-container-nav .programs-container-nav-item:hover{
+  background-color:rgba(255, 255, 255, 0.185);   
+}
+
+.active{
+  background-color:rgba(255, 255, 255, 0.185);
+}
+
+.programs-container .programs-container-nav .programs-container-nav-item .programs-container-nav-item-link{
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  padding: .8rem .8rem;
+  color: #DFDFDF;
+  font-size: 1.1rem;
+  /* text-align: center; */
+}
+
+
+.programs-container-content .programs-container-content-item{
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 2.5rem;
+  height: 0;
+  
+}
+.programs-container-content .programs-container-content-item iframe{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.modal-body iframe{
+  width: 100%;
+  height: 400px;
+}
+
+@media only screen and (max-width:1007px){
+  .programs-container{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+  }
+
+  .programs-container .programs-container-nav{
+      width: 100%;
+      margin-bottom: 3rem;
+  }
+}
+
+.mySlider{
+  padding-top: 2vh;
+  padding-bottom:4vh;
+  overflow: hidden;
+}
+.carousel-inner{
+  height: 100%;
+}
+
+.carousel-inner .carousel-item{
+  width: 100%;
+  height: 100%;
+}
+
+/* .carousel-inner .carousel-item img{
+  width: 100%;
+  height: 100%;
+} */
+
+.vhw{
+  width: 17rem;
+  height: 12rem;
+  margin: 1rem;
+}
+
+@media only screen and (max-width:500px){
+  .topvideo{
+      margin-bottom: 2rem;
+  }
+  .carousel {
+      margin-top: 2rem;
+  }
+}
+
+.news{
+  height: 45vh;
+  display: flex;
+  justify-content: space-between;
+}
+.main-news{
+  display: inline-block;
+  width: 70%;
+  background: rgb(209, 149, 149);
+  overflow: hidden;
+  position: relative;
+}
+
+.main-news img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: -1;
+}
+
+.main-news .news-title{
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  font-size: 1.3rem;
+  padding: .3rem 1rem;
+  color: rgb(228, 228, 228);
+  z-index: 1;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.383);
+}
+.latest-news{
+  width: 29%;
+  background: rgb(248, 248, 248);
+  padding: 1rem;
+  overflow-y: auto;
+}
+.latest-news h2{
+  font-size: 1.2rem !important;
+  color: rgb(39, 39, 39) !important;
+  color: rgb(226, 226, 226);
+  margin-bottom: 1rem;
+}
+.latest-news-item{
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  width: 100%;
+  height: 6rem;
+  background: rgba(0, 0, 0, 0.061);
+  display: flex;
+  margin-bottom: 1rem;
+}
+.latest-news-item .img-box{
+  flex-basis: 40%;
+  overflow: hidden;
+}
+.latest-news-item .img-box img{
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+.latest-news-item .title{
+  flex-basis: 60%;
+  font-size: 1rem;
+  padding: 0 .3rem;
+  height: 100%;
+  text-align: left;
+}
+
+.others-news{
+  width: 100%;
+}
+
+.others-news h2{
+  margin: 2rem 0;
+  font-size: 1.4rem;
+  display: block;
+}
+
+.others-news .others-news-box{
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.others-news .others-news-box .others-news-box-item{
+  display: inline-block;
+  text-decoration: none;
+  width: 16rem;
+  background: #fff;
+  margin: 1rem;
+  overflow: hidden;
+  transition: all .3s;
+}
+
+.others-news .others-news-box .others-news-box-item:hover{
+  transform: scale(1.05);
+}
+
+.others-news .others-news-box .others-news-box-item img{
+  height: 15rem;
+  width: 100%;
+}
+
+.others-news .others-news-box .others-news-box-item p{
+  width: 100%;
+  padding:.2rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+@media only screen and (max-width:1050px){
+
+  .latest-news-item .title{
+      font-size: .8rem;
+  }
+}
+
+@media only screen and (max-width:730px){
+  .news{
+      justify-content: center;
+  }
+  .main-news{
+      width: 97%;
+  }
+
+  .latest-news{
+      display: none;
   }
 }
