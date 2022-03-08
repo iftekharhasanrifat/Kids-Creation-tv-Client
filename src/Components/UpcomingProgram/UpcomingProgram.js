@@ -26,11 +26,11 @@ const UpcomingProgram = () => {
                             <Carousel.Item key={index}>
                                 <img
                                     className="d-block w-100"
-                                    src={PF + upcomingProgram.photo}
+                                    src={PF + upcomingProgram?.photo}
                                     alt="First slide"
                                 />
                                 <Carousel.Caption>
-                                    <h3 style={{backgroundColor: 'rgba(0,0,0,0.6)',borderRadius:'10px'}} className="p-2">{upcomingProgram.title}</h3>
+                                    <h3 style={{backgroundColor: 'rgba(0,0,0,0.6)',borderRadius:'10px'}} className="p-2">{upcomingProgram?.title}</h3>
                                     
                                 </Carousel.Caption>
                             </Carousel.Item>

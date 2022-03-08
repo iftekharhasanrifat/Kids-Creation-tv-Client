@@ -49,12 +49,12 @@ const KidsNews = () => {
 
                         <div class="latest-news">
                             <h2>তাজা খবর</h2>
-                            {latestNews.map(singleLatestNews => <Link to={`/kidsNews/${singleLatestNews._id}`} class="latest-news-item">
+                            {latestNews.map(singleLatestNews => <Link to={`/kidsNews/${singleLatestNews?._id}`} class="latest-news-item">
 
                                 <div class="img-box">
-                                    <img src={PF + singleLatestNews.photo} alt="news" />
+                                    <img src={PF + singleLatestNews?.photo} alt="news" />
                                 </div>
-                                <p class="title">{singleLatestNews.title}</p>
+                                <p class="title">{singleLatestNews?.title}</p>
 
                             </Link>
                             )}
@@ -67,17 +67,17 @@ const KidsNews = () => {
                     <div class="others-news">
                         <h2>আরও খবর</h2>
                         <div class="others-news-box">
-                            {moreNews.length < 1 ? kidsNews.map(singleNews => <Link to={`/kidsNews/${singleNews._id}`} class="others-news-box-item">
+                            {moreNews.length < 1 ? kidsNews.map(singleNews => <Link to={`/kidsNews/${singleNews?._id}`} class="others-news-box-item">
                                 <div class="img-box">
-                                    <img src={PF + singleNews.photo} alt="news" />
+                                    <img src={PF + singleNews?.photo} alt="news" />
                                 </div>
-                                <p class="title">{singleNews.title}</p>
+                                <p class="title">{singleNews?.title}</p>
                             </Link>) :
-                                moreNews.map(singleNews => <Link to={`/kidsNews/${singleNews._id}`} class="others-news-box-item">
+                                moreNews.map(singleNews => <Link to={`/kidsNews/${singleNews?._id}`} class="others-news-box-item">
                                     <div class="img-box">
-                                        <img src={PF + singleNews.photo} alt="news" />
+                                        <img src={PF + singleNews?.photo} alt="news" />
                                     </div>
-                                    <p class="title">{singleNews.title}</p>
+                                    <p class="title">{singleNews?.title}</p>
                                 </Link>)
                             }
 

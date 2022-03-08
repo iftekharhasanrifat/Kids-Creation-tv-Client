@@ -34,7 +34,7 @@ const Program = () => {
                                 :
                                 programs.filter(program => program.category === category).map((program,index) => <div className="vhw">
                                     <div className="programs-container-content-item">
-                                        <iframe width="560" height="315" title={index} src={`https://www.youtube.com/embed/${program.link.split('/')[3]}`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                        <iframe width="560" height="315" title={index} src={`https://www.youtube.com/embed/${program?.link.split('/')[3]}`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                                     </div>
                                 </div>
                                 )

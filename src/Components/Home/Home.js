@@ -66,7 +66,7 @@ const Home = () => {
                                     <Carousel.Item key={index}>
                                         <img
                                             className="d-block w-100"
-                                            src={PF+banner.photo}
+                                            src={PF+banner?.photo}
                                             alt="First slide"
                                         />
 
@@ -83,14 +83,14 @@ const Home = () => {
                                 <div className="d-flex justify-content-center col">
                                     <div className="card">
                                         <div className="card-video">
-                                            <iframe width="560" height="315" src={`https://www.youtube.com/embed/${program.link.split('/')[3]}`}
+                                            <iframe width="560" height="315" src={`https://www.youtube.com/embed/${program?.link.split('/')[3]}`}
                                                 frameBorder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen></iframe>
                                         </div>
                                         <div className="card-body">
 
-                                            <button onClick={() => setLink(`https://www.youtube.com/embed/${program.link.split('/')[3]}`)} type="button" className="btn btn-primary" style={{ width: '100%' }}
+                                            <button onClick={() => setLink(`https://www.youtube.com/embed/${program?.link.split('/')[3]}`)} type="button" className="btn btn-primary" style={{ width: '100%' }}
                                                 data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                                 Watch
                                             </button>
