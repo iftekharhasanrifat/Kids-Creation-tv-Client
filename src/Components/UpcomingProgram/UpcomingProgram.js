@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Carousel } from 'react-bootstrap';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 
@@ -14,14 +15,30 @@ const UpcomingProgram = () => {
             })
     }, [])
     return (
-        <div  className="bg-warning">
+        <div className="bg-warning">
             <Navbar />
             <main style={{ height: '100vh' }} className="mt-5 d-flex justify-content-center container flex-wrap">
-                {upcomingPrograms.map((upcomingProgram,index) => <div key={index} style={{width:'400px',height:'400px',margin:'10px'}}className="text-center">
-                <h2>{upcomingProgram.title}</h2>
-                <img src={PF+ upcomingProgram.photo} style={{width:'400px',height:'250px'}} alt="" />
-            </div>)}
-           
+
+
+                <Carousel interval={1000}>
+                    {
+                        upcomingPrograms.map((upcomingProgram, index) =>
+                            <Carousel.Item key={index}>
+                                <img
+                                    className="d-block w-100"
+                                    src={PF + upcomingProgram.photo}
+                                    alt="First slide"
+                                />
+                                <Carousel.Caption>
+                                    <h3 style={{backgroundColor: 'rgba(0,0,0,0.6)',borderRadius:'10px'}} className="p-2">{upcomingProgram.title}</h3>
+                                    
+                                </Carousel.Caption>
+                            </Carousel.Item>
+
+                        )
+                    }
+
+                </Carousel>
 
             </main>
             <Footer />

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import togglerIcon from '../../images/toggler-icon.svg'
 import logo from '../../images/Logo TV.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import {  faFacebook,faTwitter,faYoutube } from '@fortawesome/free-brands-svg-icons';
 const Navbar = () => {
     return (
@@ -12,9 +11,9 @@ const Navbar = () => {
                 <div className="cont">
                     <nav className="navbar navbar-expand-lg navbar-light">
                         <div className="social-links">
-                            <a target='_blank' href="https://www.facebook.com/KidsCreation.TV"><FontAwesomeIcon className="text-primary" icon={faFacebook} /></a>
-                            <a target='_blank' href="https://twitter.com/KidsCreationTV1"><FontAwesomeIcon className="text-primary" icon={faTwitter} /></a>
-                            <a target='_blank' id="youtube" href="https://www.youtube.com/KidsCreationTV"><FontAwesomeIcon className="text-danger" icon={faYoutube} /></a>
+                            <a target='_blank' rel="noreferrer" href="https://www.facebook.com/KidsCreation.TV"><FontAwesomeIcon className="text-primary" icon={faFacebook} /></a>
+                            <a target='_blank'  rel="noreferrer" href="https://twitter.com/KidsCreationTV1"><FontAwesomeIcon className="text-primary" icon={faTwitter} /></a>
+                            <a target='_blank' rel="noreferrer" id="youtube" href="https://www.youtube.com/KidsCreationTV"><FontAwesomeIcon className="text-danger" icon={faYoutube} /></a>
                         </div>
                         <div className="container-fluid ">
                             <Link id="logo" className="navbar-brand" to={'/'}>

@@ -6,13 +6,17 @@ import KidsFbBanner2 from "../../images/Kids-FB-Banar (2).jpg";
 import Card2Banner from '../../images/Card-02.jpg'
 import Footer from '../Footer/Footer';
 import kidsLogo from '../../images/Logo TV.png';
+import { Carousel } from 'react-bootstrap';
 
 
 
 const Home = () => {
+    const PF = "http://localhost:5000/images/";
+
     const [programs, setPrograms] = useState([]);
-    
-    const [link,setLink] = useState('');
+    const [banners, setBanners] = useState([]);
+
+    const [link, setLink] = useState('');
 
     useEffect(() => {
         fetch('http://localhost:5000/api/programs')
@@ -21,7 +25,15 @@ const Home = () => {
                 setPrograms(data);
                 console.log(data);
             })
+        fetch('http://localhost:5000/api/banners')
+            .then(res => res.json())
+            .then(data => {
+                setBanners(data);
+                console.log(data);
+            })
     }, [])
+
+
 
     return (
         <div className="bg-warning">
@@ -46,44 +58,23 @@ const Home = () => {
                         </section>
                     </section>
 
+
                     <section className="mySlider">
-                        <div id="carousel">
-                            <div className="slideshow mt-5 mb-5">
-                                <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
-                                    <ol className="carousel-indicators">
-                                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active">
-                                        </li>
-                                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-                                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-                                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
-                                    </ol>
-                                    <div className="carousel-inner">
-                                        <div className="carousel-item active">
-                                            <img src={RamadanBanar1} className="d-block w-100" alt="..." />
-                                        </div>
-                                        <div className="carousel-item">
-                                            <img src={LalShobujCoverBanner1} className="d-block w-100" alt="..." />
-                                        </div>
-                                        <div className="carousel-item">
-                                            <img src={KidsFbBanner2} className="d-block w-100" alt="..." />
-                                        </div>
-                                        <div className="carousel-item">
-                                            <img src={Card2Banner} className="d-block w-100" alt="..." />
-                                        </div>
-                                    </div>
-                                    <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                                        data-bs-slide="prev">
-                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Previous</span>
-                                    </a>
-                                    <a className="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                                        data-bs-slide="next">
-                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Next</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        <Carousel interval={1000}>
+                            {
+                                banners.map((banner, index) =>
+                                    <Carousel.Item key={index}>
+                                        <img
+                                            className="d-block w-100"
+                                            src={PF+banner.photo}
+                                            alt="First slide"
+                                        />
+
+                                    </Carousel.Item>
+                                )
+                            }
+
+                        </Carousel>
                     </section>
 
                     <section id="contents" className="container">
@@ -99,7 +90,7 @@ const Home = () => {
                                         </div>
                                         <div className="card-body">
 
-                                            <button onClick={()=>setLink(`https://www.youtube.com/embed/${program.link.split('/')[3]}`)} type="button" className="btn btn-primary" style={{ width: '100%' }}
+                                            <button onClick={() => setLink(`https://www.youtube.com/embed/${program.link.split('/')[3]}`)} type="button" className="btn btn-primary" style={{ width: '100%' }}
                                                 data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                                 Watch
                                             </button>

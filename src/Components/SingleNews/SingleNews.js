@@ -46,9 +46,9 @@ const SingleNews = () => {
             <main id="programs" className="mt-5">
                 <div className="cont">
                     <div className="news">
-                        <a href="#" className="main-news">
-                            <img src={PF + singleKidNews.photo} alt="top-news" />
-                        </a>
+
+                        <img className="main-news" src={PF + singleKidNews.photo} alt="top-news" />
+
                         <div className="latest-news">
                             <h2>তাজা খবর</h2>
                             {latestNews.map(singleLatestNews => <Link to={`/kidsNews/${singleLatestNews._id}`} class="latest-news-item">

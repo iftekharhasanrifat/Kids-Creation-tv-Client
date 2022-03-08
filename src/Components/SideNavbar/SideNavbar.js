@@ -6,23 +6,23 @@ const SideNavbar = (props) => {
         <div>
             <div className="programs-container-nav">
                     <div className="programs-container-nav-item">
-                        <a onClick={(e)=>handleCategory(e.target.innerHTML)} className="programs-container-nav-item-link ">Know Your Country</a>
+                        <span onClick={(e)=>handleCategory(e.target.innerHTML)} className="programs-container-nav-item-link ">Know Your Country</span>
                     </div>
     
                     <div className="programs-container-nav-item">
-                        <a onClick={(e)=>handleCategory(e.target.innerHTML)} className="programs-container-nav-item-link">Cartoon Songs</a>
+                        <span onClick={(e)=>handleCategory(e.target.innerHTML)} className="programs-container-nav-item-link">Cartoon Songs</span>
                     </div>
     
                     <div className="programs-container-nav-item">
-                        <a onClick={(e)=>handleCategory(e.target.innerHTML)} className="programs-container-nav-item-link">Poems</a>
+                        <span onClick={(e)=>handleCategory(e.target.innerHTML)} className="programs-container-nav-item-link">Poems</span>
                     </div>
     
                     <div className="programs-container-nav-item">
-                        <a onClick={(e)=>handleCategory(e.target.innerHTML)} className="programs-container-nav-item-link">Little Genius</a>
+                        <span onClick={(e)=>handleCategory(e.target.innerHTML)} className="programs-container-nav-item-link">Little Genius</span>
                     </div>
                     
                     <div className="programs-container-nav-item">
-                        <a onClick={(e)=>handleCategory(e.target.innerHTML)} className="programs-container-nav-item-link">Country Songs</a>
+                        <span onClick={(e)=>handleCategory(e.target.innerHTML)} className="programs-container-nav-item-link">Country Songs</span>
                     </div>
                 </div>
         </div>
