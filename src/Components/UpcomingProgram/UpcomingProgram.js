@@ -20,25 +20,28 @@ const UpcomingProgram = () => {
             <main style={{ height: '100vh' }} className="mt-5 d-flex justify-content-center container flex-wrap">
 
 
-                <Carousel interval={1000}>
-                    {
-                        upcomingPrograms.map((upcomingProgram, index) =>
-                            <Carousel.Item key={index}>
-                                <img
-                                    className="d-block w-100"
-                                    src={PF + upcomingProgram?.photo}
-                                    alt="First slide"
-                                />
-                                <Carousel.Caption>
-                                    <h3 style={{backgroundColor: 'rgba(0,0,0,0.6)',borderRadius:'10px'}} className="p-2">{upcomingProgram?.title}</h3>
-                                    
-                                </Carousel.Caption>
-                            </Carousel.Item>
+                {upcomingPrograms.length > 0 ?
+                    <Carousel interval={1000}>
+                        {
+                            upcomingPrograms.map((upcomingProgram, index) =>
+                                <Carousel.Item key={index}>
+                                    <img
+                                        className="d-block w-100"
+                                        src={PF + upcomingProgram?.photo}
+                                        alt="First slide"
+                                    />
+                                    <Carousel.Caption>
+                                        <h3 style={{ backgroundColor: 'rgba(0,0,0,0.6)', borderRadius: '10px' }} className="p-2">{upcomingProgram?.title}</h3>
 
-                        )
-                    }
+                                    </Carousel.Caption>
+                                </Carousel.Item>
 
-                </Carousel>
+                            )
+                        }
+
+                    </Carousel> :
+                    <></>
+                }
 
             </main>
             <Footer />

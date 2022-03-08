@@ -60,21 +60,23 @@ const Home = () => {
 
 
                     <section className="mySlider">
-                        <Carousel interval={1000}>
-                            {
-                                banners.map((banner, index) =>
-                                    <Carousel.Item key={index}>
-                                        <img
-                                            className="d-block w-100"
-                                            src={PF+banner?.photo}
-                                            alt="First slide"
-                                        />
+                        {banners.length > 0 &&
+                            <Carousel interval={1000}>
+                                {
+                                    banners.map((banner, index) =>
+                                        <Carousel.Item key={index}>
+                                            <img
+                                                className="d-block w-100"
+                                                src={PF + banner?.photo}
+                                                alt="First slide"
+                                            />
 
-                                    </Carousel.Item>
-                                )
-                            }
+                                        </Carousel.Item>
+                                    )
+                                }
 
-                        </Carousel>
+                            </Carousel>
+                        }
                     </section>
 
                     <section id="contents" className="container">
